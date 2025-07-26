@@ -1,7 +1,7 @@
 /* battleData.h */
 #pragma once
 
-#include "pokemonConfig.h"
+#include "pokemonInfo.h"
 
 // Data for each instanced battle
 

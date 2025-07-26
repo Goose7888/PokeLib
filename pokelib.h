@@ -4,8 +4,10 @@
 
 /// LIBRARIES ///
 #include <stdio.h>
-#include "battleData.h"
-#include "pokemonConfig.h"
+#include "battleInfo.h"
+#include "pokemonInfo.h"
+
+/// GLOABAL VARS ///
 
 /// FUNCTIONS ///
 

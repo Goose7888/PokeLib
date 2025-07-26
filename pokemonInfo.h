@@ -2,7 +2,7 @@
 #pragma once
 
 #include <stdbool.h>
-#include "battleData.h" // TODO: remove this dirty include for generation_no
+#include "battleInfo.h" // TODO: remove this dirty include for generation_no
 
 //typedef enum 
 //{
