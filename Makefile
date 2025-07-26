@@ -5,7 +5,7 @@ build/pokelib	:	pokelib.c pokelib.h
 	mkdir -p ./build
 	clang -o build/pokelib pokelib.c -Wall -Wextra
 
-run 			:
+run 			: 	all
 	./build/pokelib
 
 clean 			:

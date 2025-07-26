@@ -1,5 +1,11 @@
 #include "pokelib.h"
 
+int main()
+{
+    Initialize(GEN_1, SINGLE);
+    return 0;
+}
+
 void Initialize(GameGeneration gen, BattleType bType)
 {
     printf("Hello!\n");
@@ -7,8 +13,3 @@ void Initialize(GameGeneration gen, BattleType bType)
     printf("Battle Type: %d\n", bType);
 }
 
-int main()
-{
-    Initialize(GEN_1, SINGLE);
-    return 0;
-}
