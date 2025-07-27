@@ -1,0 +1,3 @@
+[submodule "PokeData"]
+	path = PokeData
+	url = git@github.com:Goose7888/PokeData.git
