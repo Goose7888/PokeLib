@@ -8,13 +8,13 @@
 typedef struct Team
 {
     Pokemon teamMembers[6];
-    int trainerID;
     // GameGeneration of team
 } Team;
 
 /// FUNCTIONS ///
 
-Team *LoadTeamFromFile(int trainer);
+Team *LoadTeamFromFile(/*, filePath */);
 void SaveTeamToFile(Team *team);
-Team *CreateNewTeam(Pokemon pokemonArray[], int trainer);
+Team *CreateNewTeam(Pokemon pokemonArray[]);
 
+void PrintTeam(Team *team);

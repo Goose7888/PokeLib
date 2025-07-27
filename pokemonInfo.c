@@ -2,6 +2,7 @@
 
 #include "pokemonInfo.h"
 #include <stdlib.h>
+#include <stdio.h>
 
 Pokemon *CreatePokemon(unsigned int pokedexNo, unsigned int level, 
                             Stats effortValues, Stats individualValues,
@@ -30,3 +31,7 @@ void SetSpeciesData(Pokemon *pokemon)
     pokemon->type2 = NOTHING;
 }
 
+void PrintPokemon(Pokemon *pokemon)
+{
+    printf("Pokemon Species: %s", pokemon->species);
+}

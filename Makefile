@@ -2,9 +2,9 @@
 CC				:= clang
 CFLAGS			:= -Wall -Wextra
 
-SOURCES			:= pokemonInfo.c team.c example.c
+SOURCES			:= pokemonInfo.c team.c example.c teamWizard.c
 
-OBJECTS			:= pokemonInfo.o team.o example.o
+OBJECTS			:= pokemonInfo.o team.o example.o teamWizard.o
 
 TARGETS			:= example
 

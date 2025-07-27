@@ -140,4 +140,5 @@ Pokemon *CreatePokemon(unsigned int pokedexNo, unsigned int level,
 void FreePokemon(Pokemon *pokemon);
 void SetSpeciesData(Pokemon *pokemon);
 //void CalculateStats(Pokemon *pokemon);
+void PrintPokemon(Pokemon *pokemon);
 
