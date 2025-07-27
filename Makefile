@@ -2,17 +2,16 @@
 CC				:= clang
 CFLAGS			:= -Wall -Wextra
 
-SOURCES			:= pokelib.c pokemonInfo.c #battleInfo.c
+SOURCES			:= pokemonInfo.c team.c example.c
 
-OBJECTS			:= pokelib.o pokemonInfo.o #battleInfo.o
+OBJECTS			:= pokemonInfo.o team.o example.o
 
-TARGETS			:= pokelib
+TARGETS			:= example
 
 all				:	$(TARGETS)
 
 # Link objects
 $(TARGETS)		:	$(OBJECTS)
-	mkdir -p ./build
 	$(CC) -o $@ $^
 
 # Build object files
@@ -20,7 +19,7 @@ $(OBJECTS)		:	$(SOURCES)
 	$(CC) -c $(CFLAGS) $^
 
 run 			: 	all
-	./pokelib
+	./example
 
 clean 			:
 	rm *.o

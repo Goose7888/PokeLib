@@ -6,9 +6,10 @@
 #include <stdio.h>
 #include "battleInfo.h"
 #include "pokemonInfo.h"
+#include "team.h"
+#include "moveInfo.h"
 
 /// GLOABAL VARS ///
 
 /// FUNCTIONS ///
 
-void Initialize(GameGeneration gen, BattleType bType);

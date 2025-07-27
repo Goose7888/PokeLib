@@ -2,7 +2,7 @@
 #pragma once
 
 #include <stdbool.h>
-#include "battleInfo.h" // TODO: remove this dirty include for generation_no
+#include "moveInfo.h"
 
 //typedef enum 
 //{
@@ -29,6 +29,7 @@ typedef struct
 
 typedef enum Type
 {
+    NOTHING,
     NORMAL,
     FIGHTING,
     FLYING,
@@ -49,7 +50,43 @@ typedef enum Type
     FAIRY
 } Type;
 
-typedef struct
+typedef enum Gender {
+    MALE,
+    FEMALE,
+    UNKOWN
+} Gender;
+
+typedef enum Nature // See https://bulbapedia.bulbagarden.net/wiki/Nature#List_of_Natures
+{
+    LEGACY,
+    HARDY,
+    LONELY,
+    BRAVE,
+    ADAMANT,
+    NAUGHTY,
+    BOLD,
+    DOCILE,
+    RELAXED,
+    IMPISH,
+    LAX,
+    TIMID,
+    HASTY,
+    SERIOUS,
+    JOLLY,
+    NAIVE,
+    MODEST,
+    MILD,
+    QUIET,
+    BASHFUL,
+    RASH,
+    CALM,
+    GENTLE,
+    SASSY,
+    CAREFUL,
+    QUIRKY
+} Nature;
+
+typedef struct Pokemon
 {
     //GameGeneration gen;
     unsigned int pokedexNo;
@@ -63,43 +100,8 @@ typedef struct
     Stats individualValues;     // Values range from 0-31
     Stats legacyDeterminants;   // Values ranges from 0-15 in ONLY ATT, DEF, SPECIAL, SPEED
                                 // legacyDeterminants only used for Gen 1 & 2
-
-    enum Gender
-    {
-        MALE,
-        FEMALE,
-        UNKOWN
-    } Gender;
-
-    enum Nature // See https://bulbapedia.bulbagarden.net/wiki/Nature#List_of_Natures
-    {
-        HARDY,
-        LONELY,
-        BRAVE,
-        ADAMANT,
-        NAUGHTY,
-        BOLD,
-        DOCILE,
-        RELAXED,
-        IMPISH,
-        LAX,
-        TIMID,
-        HASTY,
-        SERIOUS,
-        JOLLY,
-        NAIVE,
-        MODEST,
-        MILD,
-        QUIET,
-        BASHFUL,
-        RASH,
-        CALM,
-        GENTLE,
-        SASSY,
-        CAREFUL,
-        QUIRKY
-    } Nature;
-
+    Gender gender;
+    Nature nature;
     bool isShiny;
 
     Stats stats; // stats is base stats + modifiers
@@ -121,12 +123,8 @@ typedef struct
             BADLY_POISON_CONDITION,
             SLEEP_CONDITION
         } statusCondition;
-        
-        
        
         bool extraConditions[100];
-        //umm there's a lot
-        //this may be better as a bunch of bools rather than an enum?
         // https://bulbapedia.bulbagarden.net/wiki/Status_condition#Volatile_status
 
     } BattleState;
@@ -135,6 +133,11 @@ typedef struct
 
 // FUNCTIONS //
 
-void CalcSpeciesData(Pokemon *pokemon);
-void CalculateStats(Pokemon *pokemon);
+Pokemon *CreatePokemon(unsigned int pokedexNo, unsigned int level, 
+                            Stats effortValues, Stats individualValues,
+                            Stats legacyDeterminants, Gender gender,
+                            Nature nature, bool isShiny);
+void FreePokemon(Pokemon *pokemon);
+void SetSpeciesData(Pokemon *pokemon);
+//void CalculateStats(Pokemon *pokemon);
 
