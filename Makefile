@@ -2,11 +2,11 @@
 CC				:= clang
 CFLAGS			:= -Wall -Wextra
 
-SOURCES			:= pokemonInfo.c team.c example.c teamWizard.c
+SOURCES			:= pokemonInfo.c team.c pokesim.c teamWizard.c pokemonWizard.c
 
-OBJECTS			:= pokemonInfo.o team.o example.o teamWizard.o
+OBJECTS			:= pokemonInfo.o team.o pokesim.o teamWizard.o pokemonWizard.o
 
-TARGETS			:= example
+TARGETS			:= pokesim
 
 all				:	$(TARGETS)
 
@@ -19,7 +19,7 @@ $(OBJECTS)		:	$(SOURCES)
 	$(CC) -c $(CFLAGS) $^
 
 run 			: 	all
-	./example
+	./pokesim
 
 clean 			:
 	rm *.o

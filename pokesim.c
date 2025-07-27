@@ -143,7 +143,8 @@ void Cleanup(TeamData *teamData)
     
     for (unsigned int i = 0; i < teamData->teamCount; i++)
     {
-        free(teamData->teamArr[i]);
+        FreeTeam(teamData->teamArr[i]);
+        //free(teamData->teamArr[i]);
     }
     free(teamData->teamArr);
 }

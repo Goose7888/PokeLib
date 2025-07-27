@@ -1,4 +1,5 @@
 /build
 pokelib
+pokesim
 example
 *.o

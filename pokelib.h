@@ -8,8 +8,9 @@
 #include "pokemonInfo.h"
 #include "team.h"
 #include "moveInfo.h"
+#include "globals.h"
 
-/// GLOABAL VARS ///
+
 
 /// FUNCTIONS ///
 

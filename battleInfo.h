@@ -2,23 +2,12 @@
 #pragma once
 
 #include "pokemonInfo.h"
+#include "globals.h"
 
 // Data for each instanced battle
 
-typedef enum 
-{
-    GEN_1 = 1,
-    GEN_2 = 2,
-    GEN_3 = 3,
-    GEN_4 = 4,
-    GEN_5 = 5,
-    GEN_6 = 6,
-    GEN_7 = 7,
-    GEN_8 = 8,
-    GEN_9 = 9
-} GameGeneration;
 
-typedef enum
+enum BattleType
 {
     SINGLE,
     DOUBLE,
@@ -26,14 +15,14 @@ typedef enum
     TRIPLE,
     ROTATION,
     INVERSE
-} BattleType;
+};
 
 
 
 typedef struct
 {
-    GameGeneration gen;
-    BattleType bType;
+    enum GameGeneration gen;
+    enum BattleType bType;
     unsigned int turnNo;
 
     // Two teams and two active pokemon go here

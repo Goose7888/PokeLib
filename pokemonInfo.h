@@ -3,6 +3,7 @@
 
 #include <stdbool.h>
 #include "moveInfo.h"
+#include "globals.h"
 
 //typedef enum 
 //{
@@ -141,4 +142,5 @@ void FreePokemon(Pokemon *pokemon);
 void SetSpeciesData(Pokemon *pokemon);
 //void CalculateStats(Pokemon *pokemon);
 void PrintPokemon(Pokemon *pokemon);
+bool ValidatePokemon(Pokemon *pokemon, enum GameGeneration generation);
 

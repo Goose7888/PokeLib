@@ -8,8 +8,4 @@ Team *InteractiveLoadTeam();
 void InteractiveSaveTeam();
 void PrintTeams();
 
-// Pokemon Functions
-Pokemon *InteractiveCreatePokemon();
-Pokemon *InteractiveLoadPokemon();
-void InteractiveSavePokemon();
 

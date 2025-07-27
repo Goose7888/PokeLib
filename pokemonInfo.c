@@ -12,6 +12,13 @@ Pokemon *CreatePokemon(unsigned int pokedexNo, unsigned int level,
     Pokemon *pokemon = (Pokemon*) malloc(sizeof(Pokemon));
     // allocate mem for new pokemon
     pokemon->pokedexNo = pokedexNo;
+    pokemon->level = level;
+    pokemon->effortValues = effortValues;
+    pokemon->individualValues = individualValues;
+    pokemon->legacyDeterminants = legacyDeterminants;
+    pokemon->gender = gender;
+    pokemon->nature = nature;
+    pokemon->isShiny = isShiny;
 
     SetSpeciesData(pokemon);     
 
@@ -34,4 +41,21 @@ void SetSpeciesData(Pokemon *pokemon)
 void PrintPokemon(Pokemon *pokemon)
 {
     printf("Pokemon Species: %s", pokemon->species);
+}
+
+bool ValidatePokemon(Pokemon *pokemon, enum GameGeneration generation)
+{
+    if (generation == GEN_1)
+    {
+        
+    }
+    if (generation == GEN_2)
+    {
+
+    }
+    if (generation == GEN_3)
+    {
+
+    }
+    return true;
 }
