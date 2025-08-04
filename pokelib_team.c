@@ -1,6 +1,6 @@
-/* team.c */
+/* pokelib_team.c */
 
-#include "team.h"
+#include "pokelib_team.h"
 
 Team *LoadTeamFromFile()
 {

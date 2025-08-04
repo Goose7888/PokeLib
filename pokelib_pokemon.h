@@ -1,22 +1,8 @@
-/* pokemonConfig.h */
+/* pokelib_pokemon.h */
 #pragma once
 
 #include <stdbool.h>
-#include "moveInfo.h"
-#include "globals.h"
-
-//typedef enum 
-//{
-//    GEN_1 = 1,
-//    GEN_2 = 2,
-//    GEN_3 = 3,
-//    GEN_4 = 4,
-//    GEN_5 = 5,
-//    GEN_6 = 6,
-//    GEN_7 = 7,
-//    GEN_8 = 8,
-//    GEN_9 = 9
-//} GameGeneration;
+#include "pokelib_move.h"
 
 typedef struct
 {
@@ -142,5 +128,8 @@ void FreePokemon(Pokemon *pokemon);
 void SetSpeciesData(Pokemon *pokemon);
 //void CalculateStats(Pokemon *pokemon);
 void PrintPokemon(Pokemon *pokemon);
-bool ValidatePokemon(Pokemon *pokemon, enum GameGeneration generation);
+//bool ValidatePokemon(Pokemon *pokemon, enum GameGeneration generation);
+
+// Takes a path to a json object containing saved pokemon
+Pokemon *pokelib_loadPokemon(const char *path);
 

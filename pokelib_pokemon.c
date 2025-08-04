@@ -1,6 +1,6 @@
-/* pokemonInfo.c */
+/* pokelib_pokemon.c */
 
-#include "pokemonInfo.h"
+#include "pokelib_pokemon.h"
 #include <stdlib.h>
 #include <stdio.h>
 
@@ -43,19 +43,25 @@ void PrintPokemon(Pokemon *pokemon)
     printf("Pokemon Species: %s", pokemon->species);
 }
 
-bool ValidatePokemon(Pokemon *pokemon, enum GameGeneration generation)
+//bool ValidatePokemon(Pokemon *pokemon, enum GameGeneration generation)
+//{
+//    if (generation == GEN_1)
+//    {
+//        
+//    }
+//    if (generation == GEN_2)
+//    {
+//
+//    }
+//    if (generation == GEN_3)
+//    {
+//
+//    }
+//    return true;
+//}
+
+Pokemon *pokelib_loadPokemon(const char * path)
 {
-    if (generation == GEN_1)
-    {
-        
-    }
-    if (generation == GEN_2)
-    {
-
-    }
-    if (generation == GEN_3)
-    {
-
-    }
-    return true;
+    printf("Loading %s\n", path);
+    return NULL;
 }

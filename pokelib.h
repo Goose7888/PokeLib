@@ -8,9 +8,8 @@
 #include "pokemonInfo.h"
 #include "team.h"
 #include "moveInfo.h"
-#include "globals.h"
 
 
 
 /// FUNCTIONS ///
-
+//void pokelib_init(const enum GameGeneration gameGeneration);
