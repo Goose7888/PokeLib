@@ -1,6 +1,6 @@
-/* pokelib_pokemon.c */
+/* pokesim_pokemon.c */
 
-#include "pokelib_pokemon.h"
+#include "pokesim_pokemon.h"
 #include <stdlib.h>
 #include <stdio.h>
 

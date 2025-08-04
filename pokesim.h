@@ -1,13 +1,12 @@
-/* PokeLib.h */
+/* pokesim.h */
 
 #pragma once
 
 /// LIBRARIES ///
 #include <stdio.h>
-#include "battleInfo.h"
-#include "pokemonInfo.h"
-#include "team.h"
-#include "moveInfo.h"
+#include "pokesim_pokemon.h"
+#include "pokesim_pokemon.h"
+#include "pokesim_pokemon.h"
 
 
 

@@ -1,7 +1,7 @@
 /* pokelib_team.h */
 
 #pragma once
-#include "pokelib_pokemon.h"
+#include "pokesim_pokemon.h"
 #include <stdio.h>
 #include <stdlib.h>
 

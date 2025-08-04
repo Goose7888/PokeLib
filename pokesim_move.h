@@ -1,4 +1,4 @@
-/* moveInfo.h */
+/* pokesim_move.h */
 #pragma once
 
 typedef struct Move

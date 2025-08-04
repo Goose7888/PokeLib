@@ -1,8 +1,8 @@
-/* pokelib_pokemon.h */
+/* pokesim_pokemon.h */
 #pragma once
 
 #include <stdbool.h>
-#include "pokelib_move.h"
+#include "pokesim_move.h"
 
 typedef struct
 {
